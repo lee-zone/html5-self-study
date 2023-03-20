@@ -11,10 +11,17 @@
 </head>
 <body>
   <video id="myVideo"
-    src="media/sample.mp4"
     width="600px"
+    controls
     muted
-    ></video>
+    >
+    <source
+      src="media/sample.mp4"
+      type="video/mp4"
+    />
+    <!-- 자막 -->
+    <track src="media/sample.vtt" kind="subtitles" srclang="en" label="English" />
+  </video>
   <button id="btnPlay" style="position: absolute; top: 20px; left: 20px; z-index: 2">플레이</button>
   <audio id="myAudio"
     src="media/the-beat-of-nature.mp3"
