@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "clear": "rimraf dist",
-    "build": "npm run clear && parcel build src/*.html",
+    "build": "npm run clear && parcel build src/*.html --no-minify",
     "dev": "parcel -p 3000 src/index.html --open",
     "start": "npm run build && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"

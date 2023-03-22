@@ -7,7 +7,48 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 <body>
-<div id="container"></div>
-<script src="js/svg.main.js"></script>
+<div id="container">
+  <!-- viewBox로 확대/축소 -->
+  <svg width="200" height="250" viewBox="0 0 200 250">
+    <!-- 사각형 -->
+    <rect x="10" y="10" width="30" height="30" fill="transparent" stroke="black" stroke-width="5" />
+    <rect x="60" y="10" rx="10" ry="10" width="30" height="30" fill="transparent" stroke="black" stroke-width="5" />
+
+    <!-- 원 -->
+    <circle cx="25" cy="75" r="20" fill="transparent" stroke="red" stroke-width="5" />
+
+    <!-- 타원 -->
+    <ellipse cx="75" cy="75" rx="20" ry="5" fill="transparent" stroke="red" stroke-width="5" />
+
+    <!-- 선 -->
+    <line x1="10" x2="50" y1="110" y2="150" stroke="orange" stroke-width="5" />
+
+    <!-- PolyLine -->
+    <polyline points="60 110 65 120 70 115 75 130 80 125 85 140 90 135 95 150 100 145"
+      stroke="orange" fill="transparent" stroke-width="5"/>
+
+    <!-- 다각형 -->
+    <polygon points="50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180"
+      stroke="green" fill="transparent" stroke-width="5"/>
+
+    <!-- Path
+     * 대문자는 절대좌표, 소문자는 상대좌표
+     Move to : M x y 또는 m dx dy
+     Line to : L x y 또는 l dx dy
+     Horizontal Line : H x 또는 h dx
+     Vertical Line : V y 또는 v dx
+     Close Path : Z 또는 z
+     3차 베지어 곡선 : C x1 y1, x2 y2, x y 또는 c dx1 dy1, dx2 dy2, dx dy
+                     S x2 y2, x y 또는 s dx2 dy2, dx dy
+     2차 베지어 곡선 : Q x1 y1, x y (혹은 q dx1 dy1, dx dy)
+                     T x y 또는 t dx dy
+     원호 : A 또는 a
+    -->
+    <path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>
+  </svg>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", function(e) {});
+</script>
 </body>
 </html>
