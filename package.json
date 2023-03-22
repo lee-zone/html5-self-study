@@ -4,7 +4,7 @@
   "scripts": {
     "clear": "rimraf dist",
     "build": "npm run clear && parcel build src/*.html --no-minify",
-    "dev": "parcel -p 3000 src/index.html --open",
+    "dev": "parcel -p 3000 src/index.html --open --no-autoinstall",
     "start": "npm run build && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@svgdotjs/svg.js": "^3.1.2",
+    "gsap": "^3.11.5",
     "plyr": "^3.7.7"
   }
 }
